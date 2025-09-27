@@ -1,22 +1,44 @@
-Here is the original picture
-![App screenshot](original.png)
+# Project 1 – Interactive 2D Geometry
 
-It can be translated to any location by clicking only inside the square.
-![App screenshot](translate.png)
+## Original
+<p align="center">
+  <img src="original.png" alt="Original app screenshot" width="560">
+</p>
 
-It can be rotated by any angle by clicking near the edges.
-![App screenshot](rotate.png)
+## Interactions
 
-The picture can be resized by taking its corners and drag it.
-![App screenshot](resize.png)
+**Translate** — click **inside** the square and drag.
+<p align="center">
+  <img src="translate.png" alt="Translate demo" width="560">
+</p>
 
-Here is a demo that I showed all the changes can be reset by pressing "r". 
-![Short demo](demo.gif)
+**Rotate** — click **near the edges** and drag.
+<p align="center">
+  <img src="rotate.png" alt="Rotate demo" width="560">
+</p>
 
-The code can be run by this command on macOS: 
+**Resize** — grab a **corner** and drag.
+<p align="center">
+  <img src="resize.png" alt="Resize demo" width="560">
+</p>
+
+**Reset** — press **r** to reset position, scale, and orientation.
+<p align="center">
+  <img src="demo.gif" alt="Short demo showing reset" width="560">
+</p>
+
+## Build & Run (macOS)
+
+```bash
+# 1) Compile GLAD
 clang -c glad/glad.c -o build/glad.o
+
+# 2) Build app (C++17, SDL3 + OpenGL)
 clang++ -std=c++17 -Wall squareStarter.cpp build/glad.o \
   -I /opt/homebrew/include -L /opt/homebrew/lib \
   -lSDL3 -framework OpenGL \
   -o square
+
+# 3) Run
 ./square
+
