@@ -1,5 +1,10 @@
 # Project 1 – Interactive 2D Geometry
 
+## Difficulties Encountered
+
+Installing SDL3 + OpenGL was the first step. Then I learned how to read **P3 PPM**s. The interactions were straightforward. I did some web browsing to get an idea how to brighten the image and I used linear brightness adjustment. Finally, packaging for submission took a few tries.
+
+
 ## Original
 <p align="center">
   <img src="original.png" alt="Original app screenshot" width="560">
@@ -41,4 +46,6 @@ clang++ -std=c++17 -Wall squareStarter.cpp build/glad.o \
 
 # 3) Run
 ./square
+
+
 
